@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 717671646}
   - component: {fileID: 717671645}
   - component: {fileID: 717671644}
+  - component: {fileID: 717671647}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Untagged
@@ -300,10 +301,52 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717671643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.651, y: -4.52, z: 0}
+  m_LocalPosition: {x: 0, y: -4.52, z: 0}
   m_LocalScale: {x: 0.5, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &717671647
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717671643}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.85, y: 1.28}
+    newSize: {x: 4.85, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2.425, y: 0.22999999}
+      - {x: 2.395, y: 0.16293648}
+      - {x: 2.2060893, y: 0.381321}
+      - {x: 2.0160892, y: 0.5832357}
+      - {x: 1.0020018, y: 0.8954455}
+      - {x: -0.68394345, y: 0.8954456}
+      - {x: -1.8998512, y: 0.611617}
+      - {x: -2.1528213, y: 0.34970394}
+      - {x: -2.3398511, y: 0.12646824}
+      - {x: -2.425, y: -0.19999999}
+      - {x: -2.355, y: -0.37}
+      - {x: -2.155, y: -0.58}
+      - {x: -1.9649999, y: -0.64}
+      - {x: 1.985, y: -0.64}
+      - {x: 2.155, y: -0.58}
+      - {x: 2.365, y: -0.37}
+      - {x: 2.425, y: -0.25}
