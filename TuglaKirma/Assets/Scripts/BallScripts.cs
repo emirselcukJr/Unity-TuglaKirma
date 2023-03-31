@@ -38,4 +38,15 @@ public class BallScripts : MonoBehaviour
         }
 
     }
+
+
+    private void OnTriggerEnter2D(Collider2D Target)
+    {
+        if (Target.tag == "floor")
+        {
+            rb.velocity = Vector2.zero;
+            
+            inGame = false;
+        }
+    }
 }
