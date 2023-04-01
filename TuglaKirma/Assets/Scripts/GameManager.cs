@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -53,6 +54,17 @@ public class GameManager : MonoBehaviour
 
         gameOverPanel.GetComponent<CanvasGroup>().DOFade(1, .5f);
     }
-    
+
+
+    public void ReStart()
+    {
+        SceneManager.LoadScene("SampleScene");
+        
+    }
+
+    public void QuitApp()
+    {
+        Application.Quit();
+    }
 
 }
