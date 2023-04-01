@@ -25,6 +25,10 @@ public class BallScripts : MonoBehaviour
 
     void Update()
     {
+        if (gameManager.gameOver)
+            return;
+        
+
         if (inGame == false)
         {
             transform.position = ballStartPos.position;
@@ -50,7 +54,7 @@ public class BallScripts : MonoBehaviour
             rb.velocity = Vector2.zero;
 
             gameManager.HakUpdate(-1);
-            
+
             inGame = false;
         }
     }

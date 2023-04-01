@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public Text skorText;
     public Text hakText;
 
+    public bool gameOver;
+
     private void Start()
     {
         hakText.text = "HAK : " + hak.ToString();
@@ -24,6 +26,7 @@ public class GameManager : MonoBehaviour
         if (hak<= 0)
         {
             hak = 0;
+            GameOver();
             
         }
 
@@ -35,5 +38,11 @@ public class GameManager : MonoBehaviour
         skor += _skor;
         skorText.text = "SKOR : " + skor.ToString();
     }
+
+    void GameOver()
+    {
+        gameOver = true;
+    }
+    
 
 }

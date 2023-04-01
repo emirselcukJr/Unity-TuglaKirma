@@ -11,9 +11,20 @@ public class paddleController : MonoBehaviour
     [SerializeField]
     float leftTarget, rightTarget;
 
-    
+    GameManager gameManager;
+
+    private void Awake()
+    {
+        gameManager = Object.FindObjectOfType<GameManager>();
+    }
+
+
     void Update()
     {
+        if (gameManager.gameOver)
+            return;
+        
+
         //Hareket
         float h = Input.GetAxis("Horizontal");
         transform.Translate(Vector2.right * h * Time.deltaTime * speed);
