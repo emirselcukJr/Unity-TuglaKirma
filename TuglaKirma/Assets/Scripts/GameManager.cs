@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,10 +14,17 @@ public class GameManager : MonoBehaviour
 
     public bool gameOver;
 
+    [SerializeField]
+    GameObject gameOverPanel;
+
     private void Start()
     {
         hakText.text = "HAK : " + hak.ToString();
         skorText.text = "SKOR : " + skor.ToString();
+
+        gameOverPanel.GetComponent<CanvasGroup>().alpha = 0f;
+
+
 
     }
 
@@ -42,6 +50,8 @@ public class GameManager : MonoBehaviour
     void GameOver()
     {
         gameOver = true;
+
+        gameOverPanel.GetComponent<CanvasGroup>().DOFade(1, .5f);
     }
     
 
