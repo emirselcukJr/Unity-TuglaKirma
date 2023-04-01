@@ -30,4 +30,10 @@ public class GameManager : MonoBehaviour
         hakText.text = "HAK : " + hak.ToString();
     }
 
+    public void SkorUpdate(int _skor)
+    {
+        skor += _skor;
+        skorText.text = "SKOR : " + skor.ToString();
+    }
+
 }

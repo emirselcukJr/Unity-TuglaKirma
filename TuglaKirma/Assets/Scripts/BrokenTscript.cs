@@ -14,6 +14,17 @@ public class BrokenTscript : MonoBehaviour
     [SerializeField]
     GameObject brickBrokenEff;
 
+    GameManager gameManager;
+
+    
+
+
+    private void Awake()
+    {
+        gameManager = Object.FindObjectOfType<GameManager>();
+        
+    }
+
     void Start()
     {
         count = 0;  
@@ -21,6 +32,9 @@ public class BrokenTscript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D target)
     {
+
+        int yTuglaSkor;
+
         if (target.gameObject.tag == "ball")
         {
             GetComponent<SpriteRenderer>().sprite = brokenBrick;
@@ -31,6 +45,13 @@ public class BrokenTscript : MonoBehaviour
                 Instantiate(brickBrokenEff,transform.position,transform.rotation);
 
                 Destroy(gameObject);
+
+                yTuglaSkor = 10;
+
+                gameManager.SkorUpdate(yTuglaSkor);
+
+
+
             }
         }
     }
