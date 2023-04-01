@@ -11,11 +11,16 @@ public class TuglaScript : MonoBehaviour
 
     GameManager gameManager;
 
-    
+    [SerializeField]
+    GameObject hakBall;
+
+
+
 
     private void Awake()
     {
         gameManager = Object.FindObjectOfType<GameManager>();
+
     }
 
     private void OnCollisionEnter2D(Collision2D target)
@@ -24,13 +29,23 @@ public class TuglaScript : MonoBehaviour
 
         if (target.gameObject.tag == "ball")
         {
-            Instantiate(brickBrokenEff,transform.position,transform.rotation);
+            //kýrýlma efekti
+            Instantiate(brickBrokenEff, transform.position, transform.rotation);
 
             Destroy(gameObject);
 
+            //tuðla skoru
             mTuglaSkor = 5;
-
             gameManager.SkorUpdate(mTuglaSkor);
+
+            //rastgele hak topu
+
+            int rastgele = Random.Range(0, 101);
+
+            if (rastgele >= 70)
+            {
+                Instantiate(hakBall, transform.position, transform.rotation);
+            }
 
         }
     }

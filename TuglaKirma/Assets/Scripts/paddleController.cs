@@ -34,4 +34,14 @@ public class paddleController : MonoBehaviour
         temp.x = Mathf.Clamp(temp.x, leftTarget, rightTarget);
         transform.position = temp;
     }
+
+    private void OnTriggerEnter2D(Collider2D Target)
+    {
+        if (Target.tag == "ekstraBall")
+        {
+            
+            gameManager.HakUpdate(1);
+            Destroy(Target.gameObject);
+        }
+    }
 }
