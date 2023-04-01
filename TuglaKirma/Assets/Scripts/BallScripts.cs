@@ -15,9 +15,12 @@ public class BallScripts : MonoBehaviour
     [SerializeField]
     Transform ballStartPos;
 
+    GameManager gameManager;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        gameManager = Object.FindObjectOfType<GameManager>();
     }
 
     void Update()
@@ -45,6 +48,8 @@ public class BallScripts : MonoBehaviour
         if (Target.tag == "floor")
         {
             rb.velocity = Vector2.zero;
+
+            gameManager.HakUpdate(-1);
             
             inGame = false;
         }
