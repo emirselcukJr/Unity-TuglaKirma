@@ -11,6 +11,9 @@ public class BrokenTscript : MonoBehaviour
     [SerializeField]
     Sprite brokenBrick;
 
+    [SerializeField]
+    GameObject brickBrokenEff;
+
     void Start()
     {
         count = 0;  
@@ -25,6 +28,8 @@ public class BrokenTscript : MonoBehaviour
 
             if (count == 2)
             {
+                Instantiate(brickBrokenEff,transform.position,transform.rotation);
+
                 Destroy(gameObject);
             }
         }

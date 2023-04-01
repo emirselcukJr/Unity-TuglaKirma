@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5800246307235468941}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.75, y: 1.01, z: -0.22378643}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
@@ -100,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   count: 0
   brokenBrick: {fileID: 21300000, guid: d376f42ca1e1bda4dac7b6b81df98ce0, type: 3}
+  brickBrokenEff: {fileID: 7131403855297882495, guid: 07a2847c6db46214cb4049103ec78bfc, type: 3}
 --- !u!61 &5800246307235468945
 BoxCollider2D:
   m_ObjectHideFlags: 0
